@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1eafc;
+    font-family: "Ubuntu", sans-serif;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(-360deg);
+    }
+}
+
+.image {
+    animation: fall 5s linear infinite;
+    transform: translateY(-120%) rotate(0deg);
+    width: 8%;
+}
+
+.num-0 {
+    animation-delay: 1s;
+}
+
+.num-1 {
+    animation-delay: 2.5s;
+}
+
+.num-2 {
+    animation-delay: 4s;
+}
+
+.num-3 {
+    animation-delay: 0.5s;
+}
+
+.num-4 {
+    animation-delay: 2s;
+}
+
+.num-5 {
+    animation-delay: 3.5s;
+}
+
+.num-6 {
+    animation-delay: 0s;
+}
+
+.num-7 {
+    animation-delay: 1.5s;
+}
+
+.num-8 {
+    animation-delay: 3s;
+}
+
+.num-9 {
+    animation-delay: 4.5s;
+}
+
+.calculator-grid {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: rgba(154, 159, 169, 0.9);
+    border: 3px solid black;
+    padding: 5px;
+    max-width: 439.82px;
+}
+
+.output {
+    min-width: 420px;
+    min-height: 102px;
+    background-color: rgba(0, 0, 0, .75);
+    border: 2.5px solid black;
+    border-radius: 15px;
+    margin: 2px;
+    padding: 3px;
+    margin-bottom: 10px;
+    color: #e1eafc;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    font-size: 30px;
+}
+
+.current-operand {
+    font-size: 50px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons > button {
+    cursor: pointer;
+    height: 90px;
+    margin: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #e1eafc;
+}
+
+.buttons > button:hover {
+    background-color: #cdd4e3;
+}
+
+.btn-image {
+    height: 90px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
